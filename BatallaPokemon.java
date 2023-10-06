@@ -11,7 +11,7 @@ public class BatallaPokemon {
         System.out.printf("HP: %d\n", Fuego.getHP());
         System.out.printf("Experiencia: %d\n", Fuego.getExperiencia());
 
-        Fuego.atacar("Látigo Cepa", new Pokemon("Rattata", "Normal", 10));
+        Fuego.atacar("Látigo Cepa", new Pokemon("Rt", "Normal", 10));
         Fuego.ganarExperiencia(25);
 
         System.out.println("Estado de Fuego después de un ataque y ganar experiencia:");
