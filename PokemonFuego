@@ -1,0 +1,27 @@
+public class pokemos_Fuego {
+
+public class PokemonTipo extends Pokemon {
+public PokemonTipo(String nombre, int nivel) {
+super(nombre, "Hada", nivel);
+
+
+}
+
+        public PokemonTipo(String nombre, String tipo, int nivel) {
+            super(nombre, tipo, nivel);
+        }
+        //getter para la experiancia
+public int getExperiencia() {
+    int experiencia = 0;
+        return experiencia;
+    }
+
+    // Método para ganar experiencia
+    public void ganarExperiencia(int cantidad) {
+         experiencia += cantidad;
+        System.out.printf("%s gana %d puntos de experiencia\n", getNombre(), cantidad);
+    } 
+}    
+    
+    
+}
