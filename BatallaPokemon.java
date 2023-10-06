@@ -11,6 +11,15 @@ public class BatallaPokemon {
         System.out.printf("HP: %d\n", Fuego.getHP());
         System.out.printf("Experiencia: %d\n", Fuego.getExperiencia());
 
+          System.out.println("Estado de Hada:");
+        System.out.printf("Nombre: %s\n", Hada.getNombre());
+        System.out.printf("Tipo: %s\n", Hada.getTipo());
+        System.out.printf("Nivel: %d\n", Hada.getNivel());
+        System.out.printf("HP: %d\n", Hada.getHP());
+        System.out.printf("Experiencia: %d\n", Hada.getExperiencia());
+         
+         
+
         Fuego.atacar("Látigo Cepa", new Pokemon("Rt", "Normal", 10));
         Fuego.ganarExperiencia(25);
 
