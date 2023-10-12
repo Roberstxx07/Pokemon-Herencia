@@ -1,30 +1,11 @@
 public class BatallaPokemon {
-    
-     public static void main(String[] args) {
-        // Ejemplo de uso
-         pokemos_Fuego = new pokemos_Fuego ("Fuego", "Planta/Veneno", 15, 50);
+    public static void main(String[] args) {
+        // Crea instancias de las clases hijas con nombre y nivel 10
+        PokemonAgua squirtle = new PokemonAgua("Squirtle", 10);
+        PokemonFuego charmander = new PokemonFuego("Charmander", 10);
 
-        System.out.println("Estado de Fuego:");
-        System.out.printf("Nombre: %s\n", Fuego.getNombre());
-        System.out.printf("Tipo: %s\n", Fuego.getTipo());
-        System.out.printf("Nivel: %d\n", Fuego.getNivel());
-        System.out.printf("HP: %d\n", Fuego.getHP());
-        System.out.printf("Experiencia: %d\n", Fuego.getExperiencia());
-
-          System.out.println("Estado de Hada:");
-        System.out.printf("Nombre: %s\n", Hada.getNombre());
-        System.out.printf("Tipo: %s\n", Hada.getTipo());
-        System.out.printf("Nivel: %d\n", Hada.getNivel());
-        System.out.printf("HP: %d\n", Hada.getHP());
-        System.out.printf("Experiencia: %d\n", Hada.getExperiencia());
-         
-         
-
-        Fuego.atacar("Látigo Cepa", new Pokemon("Rt", "Normal", 10));
-        Fuego.ganarExperiencia(25);
-
-        System.out.println("Estado de Fuego después de un ataque y ganar experiencia:");
-        System.out.printf("HP: %d\n", Fuego.getHP());
-        System.out.printf("Experiencia: %d\n", Fuego.getExperiencia());
+        // Realiza la primera batalla
+        squirtle.atacar("Burbuja", charmander);
+        charmander.atacar("Ascuas", squirtle);
     }
 }
