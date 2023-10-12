@@ -2,20 +2,17 @@
 
 public class Pokemon {
     public int hp;
-    public int nivel;
-    public String nombre;
-    public String tipo;
+    private final int nivel;
+    final String nombre;
+    private final String tipo;
 
-    // Constructor
     public Pokemon(String nombre, String tipo, int nivel) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.nivel = nivel;
         this.hp = 100;
-        
-}
+    }
 
-    // Métodos getter
     public int getHP() {
         return hp;
     }
@@ -32,22 +29,22 @@ public class Pokemon {
         return nivel;
     }
 
-    // Método privado para calcular el daño
-    private void calculaDanio(int danio) {
+     private void calculaDanio(int danio) {
         this.hp -= danio;
         System.out.printf("%s recibe %d puntos de daño\n", this.getNombre(), danio);
     }
 
-    // Método para recibir un ataque
     public void recibirAtaque(String movimiento) {
-        System.out.printf("%s recibe ATK %s\n", this.getNombre(), movimiento);
-        int danio = (int) (Math.random() * 10 + 1);
+        int danio = (int) (Math.random() * 10 + 1); // Genera un daño aleatorio entre 1 y 10
         calculaDanio(danio);
+        System.out.printf("%s recibe ATK %s\n", this.getNombre(), movimiento);
+        System.out.printf("%s tiene ahora %d puntos de vida.\n", this.getNombre(), this.hp);
     }
 
-    // Método para atacar a otro Pokémon
     public void atacar(String movimiento, Pokemon pokemon) {
+        int danio = (int) (Math.random() * 10 + 1); // Genera un daño aleatorio entre 1 y 10
         System.out.printf("%s ataca a %s con %s\n", this.getNombre(), pokemon.getNombre(), movimiento);
         pokemon.recibirAtaque(movimiento);
+        System.out.printf("%s tiene ahora %d puntos de vida.\n", pokemon.getNombre(), pokemon.getHP());
     }
 }
